@@ -33,7 +33,7 @@ class JobPostsRepository extends AbstractRepository
             return false;
         }
 
-        if ( ! $this->getUserEmail($input["email"])) {
+        if ( ! $this->checkUserEmail($input["email"])) {
             // fire an user email event if this is first posting of the user
             $fired = $this->events->fire("email.create", array($input));
         } else {
@@ -78,13 +78,13 @@ class JobPostsRepository extends AbstractRepository
         return true;
     }
 
-    public function getUserEmail($email)
+    private function checkUserEmail($email)
     {
-        if ($this->model->exist($email)->count() > 0) {
-            return false;
+        if ($this->model->withApproved()->exist($email)->count() > 0) {
+            return true;
         }
 
-        return true;        
+        return false;        
     }
 
 }

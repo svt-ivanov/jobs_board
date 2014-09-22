@@ -26,6 +26,10 @@ class JobPostModel extends Eloquent
         $this->description = $input["description"];
         $this->email = $input["email"];
 
+        if (isset($input["approved"])) {
+            $this->approved = $input["approved"];
+        }
+
         return $this->save();
     }
 
