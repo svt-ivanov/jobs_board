@@ -2,7 +2,9 @@
 The application utilizes the Laravel 4.2 framework.
 
 ## Description:
-This project is a very general Laravel code sample. 
+This project is a very general Laravel code sample. The mailing is event
+based. Part of the main domain logic is transferred into repository.
+PHPUnit tests are employeed for testing the repository. 
 
 ## Requirements:
     + PHP >= 5.4
@@ -20,6 +22,9 @@ app/config/local/database.php. If you intend to use the PHPUnit tests example, y
 need to set the configurations into app/config/testing/database.php as well. For the
 sake of testing purpose, create a new test database, which unit tests will use. Here I
 decided to use MySQL as well instead of SQLite because it is only one table anyway.    
+
+For the mailing you need to setup configurations into app/config/local/mail.php, if
+you intend to run it on some local machine or directly into app/config/mail.php.   
 
 After you finish with the setup, you may run into CLI from the project directory:
  "php artisan serve" and start testing the boarding system.
