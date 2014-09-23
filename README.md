@@ -9,8 +9,8 @@ PHPUnit tests are employeed for testing the repository.
 ## Requirements:
     + PHP >= 5.4
     + MCrypt PHP Extension
-    + Composer package manager
-    + MySQL server
+    + Composer Package Manager
+    + MySQL Server
 
 ## Usage:
 Clone the repo and set the necessary configurations. 
