@@ -7,10 +7,10 @@ based. Part of the main domain logic is transferred into repository.
 PHPUnit tests are employeed for testing the repository. 
 
 ## Requirements:
-    + PHP >= 5.4
-    + MCrypt PHP Extension
-    + Composer Package Manager
-    + MySQL Server
++ PHP >= 5.4
++ MCrypt PHP Extension
++ Composer Package Manager
++ MySQL Server
 
 ## Usage:
 Clone the repo and set the necessary configurations. 
