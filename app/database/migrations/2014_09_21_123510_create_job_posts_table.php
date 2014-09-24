@@ -16,7 +16,7 @@ class CreateJobPostsTable extends Migration {
             $table->increments("id");
             $table->string("title");
             $table->text("description");
-            $table->string("email");
+            $table->string("email")->index();
             $table->boolean("approved")->default(0);
             $table->timestamps();
             $table->softDeletes();

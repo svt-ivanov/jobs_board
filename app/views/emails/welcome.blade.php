@@ -7,10 +7,10 @@
         <h2>Job posting</h2>
 
         <p>
-            Dear Mr/Mrs,<br/><br/>
+            Dear Mr/Mrs, <br/><br/>
         
-            The submitted post: <strong>"{{ $title }}"</strong> is being currently upon moderation.<br/>
-            On approvement, you will receive subsequent confirmation letter.  
+            The submitted post: <strong>"{{ $title }}"</strong> is being currently upon moderation. <br/>
+            On approvement, you would receive further confirmation letter.  
         </p>
 
         <p>Thank you for using our board system.</p>

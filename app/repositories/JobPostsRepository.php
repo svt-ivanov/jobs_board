@@ -25,7 +25,7 @@ class JobPostsRepository extends AbstractRepository
 
     public function store($input)
     {
-        $fired = null;
+        $trigger = false;
 
         $this->validation->store($input);
         if ($this->validation->fails()) {
@@ -33,11 +33,12 @@ class JobPostsRepository extends AbstractRepository
             return false;
         }
 
+        // check if user has been posted already in the system
         if ( ! $this->checkUserEmail($input["email"])) {
-            // fire an user email event if this is first posting of the user
-            $fired = $this->events->fire("email.create", array($input));
+            // if not, set the boolean flag to trigger an email event
+            $trigger = true;
         } else {
-            // set db boolean field to be true
+            // if yes, set the db boolean field to be true
             $input["approved"] = 1;
         }
 
@@ -47,10 +48,10 @@ class JobPostsRepository extends AbstractRepository
             return false;
         }
 
-        if ( ! empty($fired) && is_array($fired)) {
-            // fire an moderator email event if email is sent
-            // to the user already and db record is created
-            $this->events->fire("email.approve", array($job_post->id, $input));
+        // trigger an event
+        if ($trigger) {
+            $input["id"] = $job_post->id;
+            $this->events->fire("email.create", array($input));
         }
 
         return true;

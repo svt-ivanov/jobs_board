@@ -31,12 +31,11 @@
                  </div>
             </div> <!-- container --> 
         </div> <!-- navbar -->
-
              
         <div class="container">
             <div class="jumbotron">
                 <h1>Simple jobs board system example</h1>
-                <p>This example is a quick exercise to illustrate basic knowledge on Laravel framework and PHP design patterns.</p>
+                <p>This example is to illustrate basic knowledge on Laravel framework and PHP good programming practice.</p>
             </div>
         </div> <!-- container -->
         
