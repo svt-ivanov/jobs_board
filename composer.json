@@ -14,7 +14,11 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+		
+		"psr-4":{
+			"Svetoslav\\Library\\": "app/library"	
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [

@@ -1,4 +1,4 @@
-<?php 
+<?php namespace Svetoslav\Library\Validation;
 
 class JobPostValidation extends AbstractValidation
 {

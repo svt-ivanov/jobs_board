@@ -1,4 +1,4 @@
-<?php
+<?php namespace Svetoslav\Library\Validation;
 
 abstract class AbstractValidation
 {
@@ -6,13 +6,13 @@ abstract class AbstractValidation
 
     protected function validate($data, $rules)
     {
-        $this->validator = Validator::make($data, $rules);
+        $this->validator = \Validator::make($data, $rules);
     }
 
     public function __construct()
     {
         // set custom validations
-        Validator::extend("title", function($attribute, $value) {
+        \Validator::extend("title", function($attribute, $value) {
             return preg_match('/^[\pL\pN\s\-_\.]+$/u', $value);
         });
     }
@@ -20,7 +20,7 @@ abstract class AbstractValidation
     public function passes()
     {
         if ($this->validator === null) {
-            throw new Exception("Validator not initalized");
+            throw new \Exception("Validator not initalized");
         }
 
         return $this->validator->passes();
@@ -29,7 +29,7 @@ abstract class AbstractValidation
     public function fails()
     {
         if ($this->validator === null) {
-            throw new Exception("Validator not initalized");
+            throw new \Exception("Validator not initalized");
         }
 
         return $this->validator->fails();

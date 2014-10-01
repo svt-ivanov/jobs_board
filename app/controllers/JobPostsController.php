@@ -1,10 +1,12 @@
 <?php
 
+use Svetoslav\Library\Repository\JobPostRepository;
+
 class JobPostsController extends \BaseController 
 {
 	private $repository;
 
-	public function __construct(\JobPostsRepository $repository)
+	public function __construct(JobPostRepository $repository)
 	{
 	    $this->repository = $repository;
 	}

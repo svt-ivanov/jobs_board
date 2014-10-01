@@ -1,4 +1,4 @@
-<?php
+<?php namespace Svetoslav\Library\Repository;
 
 abstract class AbstractRepository
 {

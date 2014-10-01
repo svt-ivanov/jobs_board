@@ -1,12 +1,13 @@
-<?php
+<?php namespace Svetoslav\Library\Repository;
 
+use Svetoslav\Library\Validation\JobPostValidation;
 use Illuminate\Events\Dispatcher;
 
-class JobPostsRepository extends AbstractRepository
+class JobPostRepository extends AbstractRepository
 {
     protected $events;
 
-    public function __construct(JobPostModel $model, JobPostValidation $validation, Dispatcher $events)
+    public function __construct(\JobPostModel $model, JobPostValidation $validation, Dispatcher $events)
     {
         $this->model = $model;
         $this->validation = $validation;
