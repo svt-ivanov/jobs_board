@@ -12,13 +12,11 @@
 */
 
 ClassLoader::addDirectories(array(
-
-	app_path().'/commands',
+	
+    app_path().'/commands',
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
-    app_path().'/events'
-
 ));
 
 /*
@@ -80,7 +78,3 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
-
-
-// Register custom event subscriptions
-Event::subscribe("EmailEventHandler");

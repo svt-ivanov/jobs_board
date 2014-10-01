@@ -1,6 +1,6 @@
-<?php namespace Svetoslav\Library\Repository;
+<?php namespace Acme\Library\Repository;
 
-use Svetoslav\Library\Validation\JobPostValidation;
+use Acme\Library\Validation\JobPostValidation;
 use Illuminate\Events\Dispatcher;
 
 class JobPostRepository extends AbstractRepository

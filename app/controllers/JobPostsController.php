@@ -1,6 +1,6 @@
 <?php
 
-use Svetoslav\Library\Repository\JobPostRepository;
+use Acme\Library\Repository\JobPostRepository;
 
 class JobPostsController extends \BaseController 
 {

@@ -1,4 +1,4 @@
-<?php namespace Svetoslav\Library\Validation;
+<?php namespace Acme\Library\Validation;
 
 abstract class AbstractValidation
 {
