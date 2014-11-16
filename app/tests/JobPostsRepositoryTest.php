@@ -8,7 +8,7 @@ class JobPostsRepositoryTest extends TestCase
     {
         parent::setUp();
 
-        $this->repo = App::make("JobPostsRepository");
+        $this->repo = App::make("Acme\Library\Repository\JobPostRepository");
     }
 
     public function testSelectJobPosts()
